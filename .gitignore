@@ -1,0 +1,4 @@
+node_modules
+schema.sql
+data/example.db
+data/test.db
