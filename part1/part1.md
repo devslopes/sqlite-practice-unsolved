@@ -20,11 +20,12 @@ We will need to do a few things to set up our database. We will need three table
 We will also need to create some entries in these tables:
 
 1. Users
-    - Create a user named Jonathan Higger, who's life motto is "I love coding".
-    - Create a user named Andrey O, who's life motto is "I love coding even more".
+    - Create a user named Jon Higgz, who's life motto is "I love coding".
+    - Create a user named Andrey Rusterton, who's life motto is "I love coding even more".
+    - Create a user named Peter Garboni, who's life motto is "I love coding even more".
 
 2. Dogs
-   - Create a dog named Doomslayer
+   - Create a dog named DOOMSLAYER
    - Create a dog named Zoey
    - Create a dog named Jefferey
 
