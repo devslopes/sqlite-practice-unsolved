@@ -178,12 +178,6 @@ describe("messing around", () => {
         })
       ).toBe(true);
     });
-    it("should have a favorite that connects jon to doomslayer", async () => {
-      const petersFavorites = await findAllFavoritesByName(db, "Peter Garboni");
-      expect(
-        petersFavorites.find((favorite) => favorite.name === "DOOMSLAYER")
-      ).toBeDefined();
-    });
 
     it("should have a favorite that connects peter to DOOMSLAYER", async () => {
       const petersFavorites = await findAllFavoritesByName(db, "Peter Garboni");
