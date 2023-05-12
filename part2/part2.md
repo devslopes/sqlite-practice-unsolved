@@ -14,12 +14,12 @@ write a query that only selects name on all dogs and orders them descending by n
  
  - write your answer in `part2/b.sql`
 c:
-write a query that selects a dog where the name is "DOOMSLAYER"
+write a query that selects a dog where the name is "Zoey"
  
  - write your answer in `part2/c.sql`
 
 d:
-Write a query to select all users' first and last names that favorited the dog with the name "DOOMSLAYER"
+Write a query to select all users' first and last names that favorited the dog with the name "Zoey"
  
  - write your answer in `part2/d.sql`
  - hint: you will need a join
