@@ -15,7 +15,7 @@ write a query that only selects name on all dogs and orders them descending by n
  - write your answer in `part2/b.sql`
  
 c:
-write a query that selects a dog where the name is "Zoey"
+write a query that selects a dog where the name is "Doomslayer"
  
  - write your answer in `part2/c.sql`
 
