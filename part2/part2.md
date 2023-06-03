@@ -13,6 +13,7 @@ b:
 write a query that only selects name on all dogs and orders them descending by name
  
  - write your answer in `part2/b.sql`
+ 
 c:
 write a query that selects a dog where the name is "Zoey"
  
