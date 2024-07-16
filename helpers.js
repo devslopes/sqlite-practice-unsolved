@@ -160,7 +160,7 @@ const queries = {
 };
 
 const getAllUniqueColumnsQuery =
-  "SELECT m.tbl_name AS table_name, il.name AS key_name, ii.name AS column_name FROM sqlite_master AS m, pragma_index_list(m.name) AS il, pragma_index_info(il.name) AS ii WHERE m.type = 'table' AND il.origin = 'u' ORDER BY table_name, key_name, ii.seqno;";
+  "SELECT m.tbl_name AS table_name, ii.name AS column_name FROM sqlite_master AS m, pragma_index_list(m.name) AS il, pragma_index_info(il.name) AS ii WHERE m.type = 'table' AND il.origin = 'u' ORDER BY table_name, ii.seqno;";
 
 const findAllUniqueColumnsInFavorites = async (db) => {
   const all = await db.all(getAllUniqueColumnsQuery);
