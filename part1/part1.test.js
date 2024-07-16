@@ -4,6 +4,7 @@ const {
   runQueries,
   queries,
   findAllFavoritesByName: findAllFavoritesByName,
+  findAllUniqueColumnsInFavorites,
   doesTableExist,
   doesLineExistInTableSchema,
   normalizeLine,
@@ -169,13 +170,16 @@ describe("messing around", () => {
     });
 
     it("you should not be able to create two favorites with the same dog_id and user_id", async () => {
+      const allUniqueConstraintColumns = await findAllUniqueColumnsInFavorites(
+        db
+      );
+      const areThereTwoColumnsInArray = (allUniqueConstraintColumns.length = 2);
+      const isDogIdColumnUnique = allUniqueConstraintColumns.includes("dog_id");
+      const isUserIdColumnUnique =
+        allUniqueConstraintColumns.includes("user_id");
+
       expect(
-        await doesLineExistInTableSchema(db, "favorites", (line) => {
-          return (
-            normalizeLine(line).includes("unique(user_id, dog_id)") ||
-            normalizeLine(line).includes("unique(dog_id, user_id)")
-          );
-        })
+        areThereTwoColumnsInArray && isDogIdColumnUnique && isUserIdColumnUnique
       ).toBe(true);
     });
 
